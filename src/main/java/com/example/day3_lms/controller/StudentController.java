@@ -31,16 +31,10 @@ public class StudentController {
 
     //updating function api
     @PutMapping("/update/{id}")
-    public StudentModel updateStudent(@PathVariable String id, @RequestBody StudentModel student) {
+    public StudentResponseDTO updateStudent(@PathVariable String id, @RequestBody StudentRequestDTO student) {
         return service.updateStudent(id, student);
     }
 
-    // delete function api
-//    @DeleteMapping("/delete/{id}")
-//    public String deleteStudent(@PathVariable String id) {
-//        service.deleteStudent(id);
-//        return "Student deleted successfully!";
-//    }
 
     // delete function api
     @DeleteMapping("/delete/{id}")
